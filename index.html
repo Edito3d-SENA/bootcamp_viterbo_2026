@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Inteligencia Artificial - SENA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Hero Section -->
+    <header class="bg-purple-900 text-white text-center py-20">
+        <h1 class="text-5xl font-bold mb-4">BOOTCAMP Inteligencia Artificial</h1>
+        <p class="text-2xl mb-8">SENA - Centro de Automatización Industrial, Regional Caldas</p>
+        <p class="text-xl italic">¡Rétate, aprende y evoluciona!</p>
+        <p class="mt-4 font-semibold">Viterbo - Caldas, Colombia</p>
+        <a href="#registro" class="mt-8 inline-block bg-yellow-500 text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition shadow-lg">Regístrate Ahora</a>
+    </header>
+
+    <!-- Agenda Section -->
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold text-center text-purple-900 mb-6">Cronograma del Evento</h2>
+        
+        <!-- Botones para ver o descargar la agenda -->
+        <div class="flex justify-center gap-4 mb-10">
+            <!-- Botón para VER el PDF -->
+            <a href="pdf/agenda.pdf" target="_blank" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-500 transition shadow hover:-translate-y-1">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                Ver Agenda
+            </a>
+            <!-- Botón para DESCARGAR el PDF -->
+            <a href="pdf/agenda.pdf" download="agenda.pdf" class="inline-flex items-center bg-purple-700 text-white font-bold py-2 px-6 rounded-lg hover:bg-purple-600 transition shadow hover:-translate-y-1">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Descargar Agenda
+            </a>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead class="bg-purple-800 text-white">
+                    <tr>
+                        <th class="py-3 px-6 text-left">Día</th>
+                        <th class="py-3 px-6 text-left">Temática Principal</th>
+                        <th class="py-3 px-6 text-left">Instructores a cargo</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <!-- Día 1 -->
+                    <tr class="border-b">
+                        <td class="py-4 px-6 font-bold">Día 1<br><span class="text-sm font-normal text-gray-500">Martes 18 Nov 2025</span></td>
+                        <td class="py-4 px-6">Introducción a la IA, Derechos de autor de la IA, Transformar ideas en texto/imágenes/audio/video y Ciberseguridad.</td>
+                        <td class="py-4 px-6">Todos, José Mauricio González Quintero, Edwin Ángel Mena Martínez, Pablo Cesar Orozco Orrego, Ismael Wilson López Cardona</td>
+                    </tr>
+                    <!-- Día 2 -->
+                    <tr class="border-b bg-purple-50">
+                        <td class="py-4 px-6 font-bold">Día 2<br><span class="text-sm font-normal text-gray-500">Miércoles 19 Nov 2025</span></td>
+                        <td class="py-4 px-6">IA generativa, Diseño con IA + Canva, Herramientas de audio (clonación de voz, música, efectos) y Herramientas de productividad.</td>
+                        <td class="py-4 px-6">Pablo Cesar Orozco Orrego, Edwin Ángel Mena Martínez, Todos, Ismael Wilson López Cardona, José Mauricio González Quintero</td>
+                    </tr>
+                    <!-- Día 3 -->
+                    <tr class="border-b">
+                        <td class="py-4 px-6 font-bold">Día 3<br><span class="text-sm font-normal text-gray-500">Jueves 20 Nov 2025</span></td>
+                        <td class="py-4 px-6">InVideo (presentaciones y videos automáticos), Peligros en tiempos de IA, Proyecto con NotebookLM y Creación de apps/páginas web.</td>
+                        <td class="py-4 px-6">Edwin Ángel Mena Martínez, Pablo Cesar Orozco Orrego, Ismael Wilson López Cardona, José Mauricio González Quintero</td>
+                    </tr>
+                    <!-- Día 4 -->
+                    <tr class="border-b bg-purple-50">
+                        <td class="py-4 px-6 font-bold">Día 4<br><span class="text-sm font-normal text-gray-500">Viernes 21 Nov 2025</span></td>
+                        <td class="py-4 px-6">Ingeniería de prompt (agentes de IA), Herramientas generadoras de videos, Inicio y revisión parcial de retos.</td>
+                        <td class="py-4 px-6">Pablo Cesar Orozco Orrego, Todos</td>
+                    </tr>
+                    <!-- Día 5 -->
+                    <tr class="border-b">
+                        <td class="py-4 px-6 font-bold">Día 5<br><span class="text-sm font-normal text-gray-500">Sábado 22 Nov 2025</span></td>
+                        <td class="py-4 px-6">Ensayo, feedback de retos, Presentación de proyectos, premiación y clausura.</td>
+                        <td class="py-4 px-6">Todos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>
