@@ -96,15 +96,23 @@
             flex-wrap: wrap;
         }
 
-        .badge-sena {
-            background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+       .badge-sena {
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-white);
+
+    /* Centrado perfecto */
+    display: inline-flex;
+    align-items: center;     /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center;      /* Centra las líneas entre sí al hacer salto de línea */
+    line-height: 1.3;        /* Mejora la separación entre líneas */
+}
 
         .institutional-title {
             font-weight: 600;
