@@ -3,87 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp Inteligencia Artificial - SENA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+    <title>Bootcamp IA Viterbo - Próximamente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0a1c;
+            --purple-main: #6c2bd9;
+            --purple-light: #a855f7;
+            --cyan-accent: #06b6d4;
+            --yellow-accent: #f59e0b;
+            --text-white: #ffffff;
+            --text-dim: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
 
-    <!-- Hero Section -->
-    <header class="bg-purple-900 text-white text-center py-20">
-        <h1 class="text-5xl font-bold mb-4">BOOTCAMP Inteligencia Artificial</h1>
-        <p class="text-2xl mb-8">SENA - Centro de Automatización Industrial, Regional Caldas</p>
-        <p class="text-xl italic">¡Rétate, aprende y evoluciona!</p>
-        <p class="mt-4 font-semibold">Viterbo - Caldas, Colombia</p>
-        <a href="#registro" class="mt-8 inline-block bg-yellow-500 text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition shadow-lg">Regístrate Ahora</a>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: hidden;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(108, 43, 217, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.25) 0%, transparent 40%);
+        }
+
+        /* Decorative Grid Overlay */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Banner Container Styles */
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px 0 20px;
+            z-index: 10;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: block;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .badge-sena {
+            background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .institutional-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            color: var(--text-white);
+        }
+
+        .location-tag {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        main {
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            color: var(--cyan-accent);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--cyan-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--cyan-accent);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 span {
+            background: linear-gradient(90deg, var(--cyan-accent), var(--purple-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* Countdown Styles */
+        .countdown-container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(80px, 130px));
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .time-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            padding: 20px 10px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .time-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--purple-light);
+        }
+
+        .number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            color: var(--text-white);
+            line-height: 1;
+        }
+
+        .label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* Information Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            padding: 18px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            background: rgba(108, 43, 217, 0.2);
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-text h4 {
+            font-size: 0.95rem;
+            color: var(--text-white);
+        }
+
+        .info-text p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        footer {
+            z-index: 10;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--card-border);
+            background: rgba(15, 10, 28, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+            }
+            .countdown-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+            .time-box {
+                padding: 12px 5px;
+            }
+            .label {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <!-- Top Banner Image -->
+    <div class="banner-container">
+        <img src="banner.png" alt="Banner Bootcamp IA Viterbo" class="banner-img">
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <span class="badge-sena">SENA - Regional Caldas | Centro de automatización industrial</span>
+            
+        </div>
+        <div class="location-tag">
+            📍 Viterbo - Caldas
+        </div>
     </header>
 
-    <!-- Agenda Section -->
-    <section class="max-w-6xl mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold text-center text-purple-900 mb-6">Cronograma del Evento</h2>
-        
-        <!-- Botones para ver o descargar la agenda -->
-        <div class="flex justify-center gap-4 mb-10">
-            <!-- Botón para VER el PDF -->
-            <a href="pdf/agenda.pdf" target="_blank" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-500 transition shadow hover:-translate-y-1">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
-                Ver Agenda
-            </a>
-            <!-- Botón para DESCARGAR el PDF -->
-            <a href="pdf/agenda.pdf" download="agenda.pdf" class="inline-flex items-center bg-purple-700 text-white font-bold py-2 px-6 rounded-lg hover:bg-purple-600 transition shadow hover:-translate-y-1">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                </svg>
-                Descargar Agenda
-            </a>
+    <main>
+        <div class="status-pill">
+            <div class="status-dot"></div>
+            Próximamente
         </div>
-        
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-                <thead class="bg-purple-800 text-white">
-                    <tr>
-                        <th class="py-3 px-6 text-left">Día</th>
-                        <th class="py-3 px-6 text-left">Temática Principal</th>
-                        <th class="py-3 px-6 text-left">Instructores a cargo</th>
-                    </tr>
-                </thead>
-                <tbody class="text-gray-700">
-                    <!-- Día 1 -->
-                    <tr class="border-b">
-                        <td class="py-4 px-6 font-bold">Día 1<br><span class="text-sm font-normal text-gray-500">Martes 18 Nov 2025</span></td>
-                        <td class="py-4 px-6">Introducción a la IA, Derechos de autor de la IA, Transformar ideas en texto/imágenes/audio/video y Ciberseguridad.</td>
-                        <td class="py-4 px-6">Todos, José Mauricio González Quintero, Edwin Ángel Mena Martínez, Pablo Cesar Orozco Orrego, Ismael Wilson López Cardona</td>
-                    </tr>
-                    <!-- Día 2 -->
-                    <tr class="border-b bg-purple-50">
-                        <td class="py-4 px-6 font-bold">Día 2<br><span class="text-sm font-normal text-gray-500">Miércoles 19 Nov 2025</span></td>
-                        <td class="py-4 px-6">IA generativa, Diseño con IA + Canva, Herramientas de audio (clonación de voz, música, efectos) y Herramientas de productividad.</td>
-                        <td class="py-4 px-6">Pablo Cesar Orozco Orrego, Edwin Ángel Mena Martínez, Todos, Ismael Wilson López Cardona, José Mauricio González Quintero</td>
-                    </tr>
-                    <!-- Día 3 -->
-                    <tr class="border-b">
-                        <td class="py-4 px-6 font-bold">Día 3<br><span class="text-sm font-normal text-gray-500">Jueves 20 Nov 2025</span></td>
-                        <td class="py-4 px-6">InVideo (presentaciones y videos automáticos), Peligros en tiempos de IA, Proyecto con NotebookLM y Creación de apps/páginas web.</td>
-                        <td class="py-4 px-6">Edwin Ángel Mena Martínez, Pablo Cesar Orozco Orrego, Ismael Wilson López Cardona, José Mauricio González Quintero</td>
-                    </tr>
-                    <!-- Día 4 -->
-                    <tr class="border-b bg-purple-50">
-                        <td class="py-4 px-6 font-bold">Día 4<br><span class="text-sm font-normal text-gray-500">Viernes 21 Nov 2025</span></td>
-                        <td class="py-4 px-6">Ingeniería de prompt (agentes de IA), Herramientas generadoras de videos, Inicio y revisión parcial de retos.</td>
-                        <td class="py-4 px-6">Pablo Cesar Orozco Orrego, Todos</td>
-                    </tr>
-                    <!-- Día 5 -->
-                    <tr class="border-b">
-                        <td class="py-4 px-6 font-bold">Día 5<br><span class="text-sm font-normal text-gray-500">Sábado 22 Nov 2025</span></td>
-                        <td class="py-4 px-6">Ensayo, feedback de retos, Presentación de proyectos, premiación y clausura.</td>
-                        <td class="py-4 px-6">Todos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
 
+        <h1>Bootcamp de <span>Inteligencia Artificial</span> <span>2026</span></h1>
+        
+        <p class="subtitle">
+            ¡Tu futuro comienza aquí! Estamos preparando una experiencia transformadora en tecnología e innovación. El portal oficial estará activo muy pronto.
+        </p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-container">
+            <div class="time-box">
+                <span class="number" id="days">00</span>
+                <span class="label">Días</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">Horas</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minutos</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">📅</div>
+                <div class="info-text">
+                    <h4>Fecha de Inicio</h4>
+                    <p>Lunes, 3 de agosto de 2026</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⏰</div>
+                <div class="info-text">
+                    <h4>Hora de Apertura</h4>
+                    <p>8:00 AM (Apertura Plataforma)</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🚀</div>
+                <div class="info-text">
+                    <h4>Duración Evento</h4>
+                    <p>Del 3 al 6 de Agosto de 2026</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 SENA Regional Caldas &bull; Centro de Automatización Industrial &bull; Bootcamp IA Viterbo
+    </footer>
+
+    <script>
+        // Target Date: August 3, 2026 at 06:00:00
+        const targetDate = new Date("August 3, 2026 08:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = String(days).padStart(2, '0');
+                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            } else {
+                // When countdown ends
+                document.querySelector(".countdown-container").innerHTML = `
+                    <div style="grid-column: 1 / -1; background: var(--purple-main); padding: 20px; border-radius: 12px; font-weight: bold; font-size: 1.2rem;">
+                        ¡El Bootcamp ha comenzado! Bienvenidos.
+                    </div>
+                `;
+            }
+        }
+
+        // Initial call
+        updateCountdown();
+
+        // Update every second
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
