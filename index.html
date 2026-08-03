@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp IA Viterbo - Próximamente</title>
+    <title>Bootcamp IA Viterbo - Portal Oficial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -26,6 +26,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-dark);
@@ -42,7 +46,6 @@
                 radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.25) 0%, transparent 40%);
         }
 
-        /* Decorative Grid Overlay */
         .grid-bg {
             position: absolute;
             top: 0;
@@ -57,7 +60,6 @@
             pointer-events: none;
         }
 
-        /* Banner Container Styles */
         .banner-container {
             width: 100%;
             max-width: 1200px;
@@ -80,7 +82,7 @@
         header {
             width: 100%;
             max-width: 1200px;
-            padding: 20px 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -96,29 +98,20 @@
             flex-wrap: wrap;
         }
 
-       .badge-sena {
-    background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--text-white);
-
-    /* Centrado perfecto */
-    display: inline-flex;
-    align-items: center;     /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    text-align: center;      /* Centra las líneas entre sí al hacer salto de línea */
-    line-height: 1.3;        /* Mejora la separación entre líneas */
-}
-
-        .institutional-title {
-            font-weight: 600;
-            font-size: 0.95rem;
+        .badge-sena {
+            background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
             letter-spacing: 0.5px;
+            text-transform: uppercase;
             color: var(--text-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.3;
         }
 
         .location-tag {
@@ -129,12 +122,54 @@
             gap: 5px;
         }
 
+        /* Navigation Links / Buttons */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 20px;
+            z-index: 10;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-dim);
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+            color: var(--text-white);
+            border-color: var(--purple-light);
+            box-shadow: 0 4px 15px rgba(108, 43, 217, 0.4);
+        }
+
         main {
             z-index: 10;
             text-align: center;
-            max-width: 900px;
+            max-width: 1000px;
+            width: 100%;
             padding: 20px;
             margin: auto;
+        }
+
+        section {
+            padding: 40px 0;
+            scroll-margin-top: 20px;
         }
 
         .status-pill {
@@ -170,7 +205,7 @@
 
         h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 15px;
@@ -186,59 +221,16 @@
         }
 
         p.subtitle {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(1rem, 2vw, 1.15rem);
             color: var(--text-dim);
-            margin-bottom: 40px;
-            max-width: 650px;
+            margin-bottom: 35px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
         }
 
-        /* Countdown Styles */
-        .countdown-container {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(80px, 130px));
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .time-box {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            backdrop-filter: blur(10px);
-            padding: 20px 10px;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .time-box:hover {
-            transform: translateY(-5px);
-            border-color: var(--purple-light);
-        }
-
-        .number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 700;
-            color: var(--text-white);
-            line-height: 1;
-        }
-
-        .label {
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 8px;
-        }
-
-        /* Information Cards */
+        /* Info Grid */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -266,6 +258,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .info-text h4 {
@@ -278,6 +271,171 @@
             color: var(--text-dim);
         }
 
+        /* Event Schedule & Brochure Gallery */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .day-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .day-box h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            color: var(--cyan-accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .schedule-item {
+            margin-bottom: 15px;
+        }
+
+        .schedule-time {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--yellow-accent);
+            text-transform: uppercase;
+        }
+
+        .schedule-desc {
+            font-size: 0.9rem;
+            color: var(--text-white);
+            margin-top: 3px;
+        }
+
+        .schedule-instructor {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        /* Padlet Section & Brochure Images inside Agenda */
+        .padlet-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            scroll-margin-top: 30px;
+        }
+
+        .padlet-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-white);
+        }
+
+        .padlet-section p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .padlet-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+            color: var(--text-white);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(108, 43, 217, 0.4);
+            transition: transform 0.2s, opacity 0.2s;
+            margin-bottom: 25px;
+        }
+
+        .padlet-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qr-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            background: #fff;
+            padding: 10px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .gallery-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .gallery-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .gallery-content h3 {
+            font-size: 1.1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-white);
+        }
+
+        .gallery-content p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
         footer {
             z-index: 10;
             width: 100%;
@@ -288,21 +446,15 @@
             border-top: 1px solid var(--card-border);
             background: rgba(15, 10, 28, 0.8);
             backdrop-filter: blur(5px);
+            margin-top: 40px;
         }
 
         @media (max-width: 600px) {
             header {
                 padding: 15px 20px;
             }
-            .countdown-container {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 8px;
-            }
-            .time-box {
-                padding: 12px 5px;
-            }
-            .label {
-                font-size: 0.65rem;
+            .nav-tabs {
+                flex-direction: column;
             }
         }
     </style>
@@ -318,109 +470,201 @@
 
     <header>
         <div class="logo-container">
-            <span class="badge-sena">SENA - Regional Caldas | Centro de automatización industrial</span>
-            
+            <span class="badge-sena">SENA - Regional Caldas | Centro de Automatización Industrial</span>
         </div>
         <div class="location-tag">
             📍 Viterbo - Caldas
         </div>
     </header>
 
+    <!-- Navigation Menu (Single Page Scroll Links) -->
+    <nav class="nav-tabs">
+        <a href="#inicio" class="tab-btn">Inicio</a>
+        <a href="#agenda" class="tab-btn">Agenda Académica</a>
+        <a href="#muro-padlet" class="tab-btn">Muro Colaborativo Oficial (Padlet)</a>
+    </nav>
+
     <main>
-        <div class="status-pill">
-            <div class="status-dot"></div>
-            Próximamente
-        </div>
+        <!-- SECTION 1: INICIO -->
+        <section id="inicio">
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                Evento Activo &bull; Agosto 2026
+            </div>
 
-        <h1>Bootcamp de <span>Inteligencia Artificial</span> <span>2026</span></h1>
-        
-        <p class="subtitle">
-            ¡Tu futuro comienza aquí! Estamos preparando una experiencia transformadora en tecnología e innovación. El portal oficial estará activo muy pronto.
-        </p>
+            <h1>Bootcamp de <span>Inteligencia Artificial</span> <span>2026</span></h1>
+            
+            <p class="subtitle">
+                ¡Bienvenidos al evento tecnológico del año! Espacio de innovación formativa en Viterbo, Caldas, impulsado por el SENA Regional Caldas.
+            </p>
 
-        <!-- Countdown Timer -->
-        <div class="countdown-container">
-            <div class="time-box">
-                <span class="number" id="days">00</span>
-                <span class="label">Días</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="hours">00</span>
-                <span class="label">Horas</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="minutes">00</span>
-                <span class="label">Minutos</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="seconds">00</span>
-                <span class="label">Segundos</span>
-            </div>
-        </div>
-
-        <!-- Quick Info -->
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="info-icon">📅</div>
-                <div class="info-text">
-                    <h4>Fecha de Inicio</h4>
-                    <p>Lunes, 3 de agosto de 2026</p>
+            <!-- Quick Info -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📅</div>
+                    <div class="info-text">
+                        <h4>Fecha de Inicio</h4>
+                        <p>Lunes, 3 de agosto de 2026</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-text">
+                        <h4>Hora de Apertura</h4>
+                        <p>8:00 AM (Apertura Plataforma)</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🚀</div>
+                    <div class="info-text">
+                        <h4>Duración Evento</h4>
+                        <p>Del 3 al 6 de Agosto de 2026</p>
+                    </div>
                 </div>
             </div>
-            <div class="info-card">
-                <div class="info-icon">⏰</div>
-                <div class="info-text">
-                    <h4>Hora de Apertura</h4>
-                    <p>8:00 AM (Apertura Plataforma)</p>
+        </section>
+
+        <!-- SECTION 2: AGENDA ACADÉMICA -->
+        <section id="agenda">
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                Programación Completa & Recursos
+            </div>
+            <h1>Agenda Académica <span>Del 3 al 6 de Agosto</span></h1>
+            <p class="subtitle">Conoce las temáticas, los instructores encargados y accede al espacio colaborativo del evento.</p>
+
+            <div class="schedule-grid">
+                <div class="day-box">
+                    <h3>Día 1 - Lunes 3 de Agosto</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">8:00 a. m. - 9:00 a. m.</div>
+                        <div class="schedule-desc">Bienvenida e introducción al Bootcamp.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 a. m. - 10:00 a. m.</div>
+                        <div class="schedule-desc">Introducción a la IA y régimen de derechos de autor.</div>
+                        <div class="schedule-instructor">Instructor: Nestor Mario Murillo Alzate.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:30 a. m. - 11:30 a. m.</div>
+                        <div class="schedule-desc">Crea tu primer avatar animado con IA.</div>
+                        <div class="schedule-instructor">Instructor: Edwin Ángel Mena Martínez.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">11:30 a. m. - 12:30 p. m.</div>
+                        <div class="schedule-desc">Ciberseguridad en tiempos de la inteligencia artificial.</div>
+                        <div class="schedule-instructor">Instructor: Pablo Cesar Orozco Orrego.</div>
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <h3>Día 2 - Martes 4 de Agosto</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">8:00 a. m. - 9:00 a. m.</div>
+                        <div class="schedule-desc">Creación de mascota publicitaria del municipio de Viterbo. (Reto)</div>
+                        <div class="schedule-instructor">Instructor: Pablo Cesar Orozco Orrego.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 a. m. - 10:00 a. m.</div>
+                        <div class="schedule-desc">Diseña tu página web con IA.</div>
+                        <div class="schedule-instructor">Instructor: Edwin Ángel Mena Martínez.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:30 a. m. - 11:30 a. m.</div>
+                        <div class="schedule-desc">Mejores herramientas de IA generativa de audio.</div>
+                        <div class="schedule-instructor">Instructor: Nestor Mario Murillo Alzate.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">11:30 a. m. - 12:30 p. m.</div>
+                        <div class="schedule-desc">Mejores herramientas de IA generativa de imágenes.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <h3>Día 3 - Miércoles 5 de Agosto</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">8:00 a. m. - 9:00 a. m.</div>
+                        <div class="schedule-desc">¿Cómo vamos? Revisión parcial del padlet.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 a. m. - 10:00 a. m.</div>
+                        <div class="schedule-desc">Inicio de proyectos: selección de grupos y objetivos.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:30 a. m. - 12:30 p. m.</div>
+                        <div class="schedule-desc">Realización y revisión parcial de proyectos.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                </div>
+
+                <div class="day-box">
+                    <h3>Día 4 - Jueves 6 de Agosto</h3>
+                    <div class="schedule-item">
+                        <div class="schedule-time">8:00 a. m. - 9:00 a. m.</div>
+                        <div class="schedule-desc">Ensayo, retroalimentación y revisión final de retos.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 a. m. - 10:00 a. m.</div>
+                        <div class="schedule-desc">Continuación de proyectos realizados con IA.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">10:30 a. m. - 11:30 a. m.</div>
+                        <div class="schedule-desc">Presentación final de proyectos, premiación y clausura.</div>
+                        <div class="schedule-instructor">Instructores: Todos.</div>
+                    </div>
                 </div>
             </div>
-            <div class="info-card">
-                <div class="info-icon">🚀</div>
-                <div class="info-text">
-                    <h4>Duración Evento</h4>
-                    <p>Del 3 al 6 de Agosto de 2026</p>
+
+            <!-- SECTION 3: MURO COLABORATIVO OFICIAL (PADLET) -->
+            <div id="muro-padlet" class="padlet-section">
+                <h3>Muro Colaborativo Oficial (Padlet)</h3>
+                <p>Ingresa al espacio interactivo para compartir tus evidencias y consultar los trabajos del bootcamp.</p>
+                <a href="https://padlet.com/edwito3d/ie_la_milagrosa" target="_blank" class="padlet-btn">🔗 Abrir Padlet Oficial</a>
+                
+                <div class="qr-container">
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Escanea el código QR para acceder desde tu dispositivo móvil:</p>
+                    <img src="qrpadlet.png" alt="QR Padlet Bootcamp IA" class="qr-img">
                 </div>
             </div>
-        </div>
+
+            <!-- Brochure Images t1.png and t2.png -->
+            <div style="margin-top: 40px; text-align: left;">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 10px;">Imágenes del Tríptico Informativo</h2>
+                <p style="color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px;">Material gráfico oficial de referencia para el evento.</p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="t1.png" alt="Tríptico Oficial t1">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Tríptico - Sección t1</h3>
+                        <p>Contiene la programación del jueves y la identidad institucional de Viterbo - Caldas.</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="t2.png" alt="Tríptico Oficial t2">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Tríptico - Sección t2</h3>
+                        <p>Cronograma detallado de los primeros días y talleres especializados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         &copy; 2026 SENA Regional Caldas &bull; Centro de Automatización Industrial &bull; Bootcamp IA Viterbo
     </footer>
 
-    <script>
-        // Target Date: August 3, 2026 at 06:00:00
-        const targetDate = new Date("August 3, 2026 08:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerText = String(days).padStart(2, '0');
-                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-            } else {
-                // When countdown ends
-                document.querySelector(".countdown-container").innerHTML = `
-                    <div style="grid-column: 1 / -1; background: var(--purple-main); padding: 20px; border-radius: 12px; font-weight: bold; font-size: 1.2rem;">
-                        ¡El Bootcamp ha comenzado! Bienvenidos.
-                    </div>
-                `;
-            }
-        }
-
-        // Initial call
-        updateCountdown();
-
-        // Update every second
-        setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>
